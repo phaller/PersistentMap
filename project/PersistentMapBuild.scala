@@ -54,7 +54,7 @@ object PersistentMapBuild extends Build {
     libraryDependencies ++= Seq(
       "org.scala-lang" % "scala-compiler" % scalaVersionString,
       "com.typesafe.slick" %% "slick" % "1.0.1",
-      "org.scala-lang" %% "scala-pickling" % "0.8.0-SNAPSHOT",
+      //"org.scala-lang" %% "scala-pickling" % "0.8.0-SNAPSHOT",
       "joda-time" % "joda-time" % "2.3",
       "org.joda" % "joda-convert" % "1.5",
       "org.xerial" % "sqlite-jdbc" % "3.7.2" % "test",
@@ -71,6 +71,7 @@ object PersistentMapBuild extends Build {
   def scalaSettings = Seq(
     scalaVersion := scalaVersionString,
     scalacOptions ++= Seq(
+      //"-Xlog-implicits",
       "-optimize",
       "-unchecked",
       "-deprecation",
